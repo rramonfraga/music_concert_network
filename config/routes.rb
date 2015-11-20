@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   
-  resources :concerts, only: [:show, :new, :create]
+  resources :concerts, only: [:index, :show, :new, :create]
 
 end

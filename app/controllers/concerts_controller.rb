@@ -1,5 +1,10 @@
 class ConcertsController < ApplicationController
 
+  def index
+    @concerts_today = Concert.concerts_today
+    @concerts_this_month = Concert.concerts_this_month
+  end
+
   def show
     @concert = Concert.find params[:id]
   end
