@@ -1,0 +1,27 @@
+<h2> Let's Rock!</h2>
+
+<ul>
+
+  <%= form_for [@concert] do |f| %>
+    <li><%= f.label :band %>
+    <%= f.text_field :band %></li>
+
+    <li><%= f.label :venue %>
+    <%= f.text_field :venue %></li>
+
+    <li><%= f.label :city %>
+    <%= f.text_field :city %></li>
+
+    <li><%= f.label :date %>
+    <%= f.date_field :date %></li>
+
+    <li><%= f.label :price %>
+    <%= f.number_field :price %></li>
+
+    <li><%= f.label :description %>
+    <%= f.text_field :description %></li>   
+
+    <%= f.submit 'Save' %>
+  <% end %>
+  
+</ul>

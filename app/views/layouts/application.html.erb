@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MusicConcertNetwork</title>
+  <title>Music Concert Network</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>MUSIC CONCERT NETWORK</h1>
+  </header>
 
 <%= yield %>
 
+  <footer>
+    <p>© COPYRIGHT 2015 MUSIC CONCERT NETWORK. ALL RIGHTS RESERVED </p>
+  </footer>
 </body>
 </html>
