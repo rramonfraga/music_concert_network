@@ -6,3 +6,11 @@
     price: index,
     description: "Bla bla bla #{index}" )
 end
+
+(1..50).each do |index|
+  random = Random.new.rand(26)
+  Comment.create(concert_id: random,
+    description: "Blo blo blo #{index}. Bla bal bla #{index}",
+    user: "User #{random}"
+    ) 
+end

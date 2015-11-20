@@ -10,3 +10,11 @@
 
 <p> Description: <%= @concert.description%> </p>
 
+<section>
+  <% @comments.each do |comment| %>
+    <div class="comment_box">
+      <p> <%= comment.description %> </p>
+      <p> <%= comment.user %> - <%= comment.updated_at%> </p>
+    </div>
+  <% end %>
+</section>
