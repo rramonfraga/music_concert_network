@@ -10,8 +10,16 @@ class Concert < ActiveRecord::Base
   end
 
   def self.concerts_this_month
-    date = Date.current + 1.day
+    date = Date.tomorrow
     where(date: date.beginning_of_day..date.end_of_month)
+  end
+
+  def self.concerts_under price=0
+    where(price: 0..price)
+  end
+
+  def self.most_popular_concerts
+    where('date > ?', Date.tomorrow).order('comments_count DESC').limit(10)
   end
 
 end

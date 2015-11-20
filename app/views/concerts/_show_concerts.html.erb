@@ -1,0 +1,12 @@
+<section>
+  <ul>
+    <% @concerts.each do |concert| %>
+      <li><ul>
+        <li><%= link_to(concert.band, concert_path(concert.id)) %> </li>
+        <li> Where: <%= concert.venue %>, <%= concert.city.upcase %></li>
+        <li> Price: <%= concert.price %> $ </li>
+        <li> Description: <%= concert.description %> </li>
+      </ul></li>
+    <% end %>
+  </ul>
+</section>

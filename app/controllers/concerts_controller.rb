@@ -1,7 +1,7 @@
 class ConcertsController < ApplicationController
 
   def index
-    @concerts_today = Concert.concerts_today
+    @concerts = Concert.concerts_today
     @concerts_this_month = Concert.concerts_this_month
   end
 
@@ -22,6 +22,14 @@ class ConcertsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def price_lower
+    @concerts = Concert.concerts_under params[:price].to_i
+  end
+
+  def popular_concerts
+    @concerts = Concert.most_popular_concerts
   end
 
   private

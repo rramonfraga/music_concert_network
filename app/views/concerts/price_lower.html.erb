@@ -1,0 +1,15 @@
+<h2> Poor concerts! </h2>
+
+<section>
+  <%= form_tag("/price_lower", method: "POST") do %>
+    <%= label_tag(:price, "Your poor money:") %>
+    <%= number_field_tag(:price) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</section>
+
+
+<section>
+  <h2> Your poor concerts!</h2>
+  <%= render 'show_concerts' %>
+</section>
