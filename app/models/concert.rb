@@ -21,6 +21,7 @@ class Concert < ActiveRecord::Base
   def self.most_popular_concerts
     where('date > ?', Date.tomorrow).order('comments_count DESC').limit(10)
   end
+  
 
 end
 

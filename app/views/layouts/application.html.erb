@@ -2,19 +2,39 @@
 <html>
 <head>
   <title>Music Concert Network</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application'%>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
   <header>
-    <h1>MUSIC CONCERT NETWORK</h1>
+    <nav class="row">
+      <ul class="menu">
+        <li class="col-md-2"></li>
+        <li class="col-md-4"> MUSIC CONCERT NETWORK </li>
+        <li class="col-md-1"> <%= link_to("Home", concerts_path) %> </li>
+        <li class="col-md-1"> <%= link_to("Create", new_concert_path) %> </li>
+        <li class="col-md-1"> <a href="/price_lower"> For Poor </a> </li>
+        <li class="col-md-1"> <a href="/popular_concerts"> Populars </a>  </li>
+        <li class="col-md-2"></li>
+      </ul>
+    </nav>
   </header>
 
-<%= yield %>
+  <section class="center">
+    <section class="row">
+      <div class="col-md-2"></div>
+        <div class="col-md-9">
+          <%= yield %>
+        </div>
+      <div class="col-md-1"></div>
+    </section>
+  </section>
 
   <footer>
     <p>© COPYRIGHT 2015 MUSIC CONCERT NETWORK. ALL RIGHTS RESERVED </p>
   </footer>
+
 </body>
 </html>

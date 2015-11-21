@@ -1,16 +1,16 @@
 
-<section> 
-<h2> Concerts today! </h2>
+  <section class="col-md-7"> 
+  <h2> Concerts today! </h2>
 
-<%= render 'show_concerts' %>
+  <%= render 'show_concerts' %>
 
-</section>
-<section>
-  <h2> Concerts this month! </h2>
-  <ul>
-    <% @concerts_this_month.each do |concert| %>
-      <li><%= link_to(concert.band, concert_path(concert.id)) %>
-      <%= concert.description %> </li>
-    <% end %>
-  </ul>
-</section>
+  </section>
+  <section class="col-md-5">
+    <h2> Concerts this month! </h2>
+    <ul>
+      <% @concerts_this_month.each do |concert| %>
+        <li><%= link_to(concert.band, concert_path(concert.id)) %>
+        <%= concert.description %> </li>
+      <% end %>
+    </ul>
+  </section>
